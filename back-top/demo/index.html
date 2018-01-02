@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>back-top</title>
+	<style>
+	.back-top{
+		position: fixed;
+		bottom: 10%;
+		right: 0;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: #000;
+		z-index: 6666;
+	}
+	</style>
+</head>
+<body>
+	<div class="2000-height" style="height: 2000px"></div>
+	<div class="back-top"></div>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/back-top.js"></script>
+<script>
+$('.back-top').backTop({time:'1000'})
+</script>
