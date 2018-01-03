@@ -19,7 +19,7 @@
 ```
 
 ##### js
-```
+```js
 $('.reciprocal').timeRec({
 	startTime	: "",
 	endTime  	: "2018/10/30 00:00:00",
