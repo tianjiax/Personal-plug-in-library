@@ -2,30 +2,44 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Time-reciprocal</title>
+	<title>back-top</title>
+	<style>
+	.back-top{
+		position: fixed;
+		bottom: 10%;
+		right: 0;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: #000;
+		z-index: 6666;
+	}
+
+	.back-top-2{
+		position: fixed;
+		bottom: 5%;
+		right: 0;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: red;
+		z-index: 6666;
+	}
+	</style>
 </head>
 <body>
-<div class="reciprocal">
-	<span class="t_day"></span>
-	<b>天</b>
-	<span class="t_hour"></span>
-	<b>时</b>
-	<span class="t_minute"></span>
-	<b>分</b>
-	<span class="t_second"></span>
-	<b>秒</b>
-</div>
+	<div class="2000-height" style="height: 2000px"></div>
+	<!-- 第一个返回顶部 -->
+	<div class="back-top"></div>
+	<!-- 第二个返回顶部 -->
+	<div class="back-top-2"></div>
 </body>
 </html>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/time-reciprocal.js"></script>	
+<script type="text/javascript" src="js/back-top.js"></script>
 <script>
-$('.reciprocal').timeRec({
-	startTime	: "",
-	endTime  	: "2018/10/30 00:00:00",
-	dayAttr  	: $('.t_day'),
-	hourAttr  	: $('.t_hour'),
-	minuteAttr  : $('.t_minute'),
-	secondAttr  : $('.t_second')
-})
+// 时间为100毫秒时候
+$('.back-top').backTop({time:100});
+// 时间为1000毫秒时候
+$('.back-top-2').backTop({time:1000});
 </script>
