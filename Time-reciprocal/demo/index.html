@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Time-reciprocal</title>
+</head>
+<body>
+<div class="reciprocal">
+	<span class="t_day"></span>
+	<b>天</b>
+	<span class="t_hour"></span>
+	<b>时</b>
+	<span class="t_minute"></span>
+	<b>分</b>
+	<span class="t_second"></span>
+	<b>秒</b>
+</div>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/time-reciprocal.js"></script>	
+<script>
+$('.reciprocal').timeRec({
+	startTime	: "",
+	endTime  	: "2018/10/30 00:00:00",
+	dayAttr  	: $('.t_day'),
+	hourAttr  	: $('.t_hour'),
+	minuteAttr  : $('.t_minute'),
+	secondAttr  : $('.t_second')
+})
+</script>
