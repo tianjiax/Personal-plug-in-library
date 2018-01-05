@@ -16,6 +16,7 @@ body{
 .slide-box .slide-out .slide-li{
 	float: left;
 	overflow:hidden; 
+	text-align: center;
 	transform:scale(0.9);
 	-moz-transform:scale(0.9);
 	-webkit-transform:scale(0.9);

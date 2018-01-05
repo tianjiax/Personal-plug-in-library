@@ -7,6 +7,32 @@
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
 	<!-- 引入slide插件样式表 -->
 	<link rel="stylesheet" href="../dist/css/full-screen-slide.css">
+	<style>
+	.slide-li{
+		text-align: center;
+	    font-size: 18px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    -webkit-justify-content: center;
+	    justify-content: center;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    -webkit-align-items: center;
+	    align-items: center;
+	}
+	.slide-li:nth-child(1){
+		background: #01ad59;
+	    color:#fff;
+	}
+	.slide-li:nth-child(3){
+		background: #eaaba2;
+	    color:#fff;
+	}
+	</style>
 </head>
 <body>
 	<!-- 默认调用 -->
@@ -18,13 +44,13 @@
 				<div class="slide-out">
 					<div class="slide-li">
 						<div class="slide-li-content">
-							<div class="box" style="background: #ddd;color: #333;height: 600px">这里是文本存放位置</div>
+							<div class="box">这里是文本存放位置</div>
 						</div>
 					</div>
 					<div class="slide-li"><img src="../dist/images/slide/1.png" style="width: 100%" alt=""></div>
 					<div class="slide-li">
 						<div class="slide-li-content">
-							<div class="box" style="background: #ccc;color: #333;height: 600px">这里是文本存放位置</div>
+							<div class="box">这里是文本存放位置</div>
 						</div>
 					</div>
 				</div>

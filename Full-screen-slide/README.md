@@ -1,15 +1,17 @@
-## 全屏轮播图
-> 该插件基于jquery开发，现阶段很多PC网站都需要用到轮播图切换的效果，很多时候要在页面中复用轮播图，而且对于PC用户而言，IE8+用户居多，我们需要做一个兼容该用户群体的全屏轮播图，同时我们也可以通过参数设置来把该幻灯片设置为非全屏复用多个位置。这时候该插件便应运而生。我们可以通过简单的调用及样式来对其进行调用，从而完成快速开发的过程。该模块并非只能是轮播图，轮播图条目区域可以放上文字列表、图片等任意内容，这块在于你自己选择。接下来我们对该插件进行一个解析：
+全屏轮播图
+==========
 
-##### [jquery封装插件的方法](http://blog.csdn.net/osdfhv/article/details/53185914)
+> 该插件基于jquery开发，现阶段很多PC网站都需要用到轮播图切换的效果，很多时候要在页面中复用轮播图，而且对于PC用户而言，IE8+用户居多，需要做一个兼容该用户群体的全屏轮播图，同时也可以通过参数设置来把该幻灯片设置为非全屏复用多个位置。这时候该插件便应运而生。可以通过简单的调用及样式来对其进行调用，从而完成快速开发的过程。该模块并非只能是轮播图，轮播图条目区域可以放上文字列表、图片等任意内容，这块在于你自己选择。接下来对该插件进行一个解析：
 
-### demo简单预览
-![image](http://ww1.sinaimg.cn/large/0060lm7Tly1fn4lgv6n98j31gu0fc4k8.jpg)
+### [jquery封装插件的方法](http://blog.csdn.net/osdfhv/article/details/53185914)
 
-### 方法调用
+# demo简单预览
+![image](https://s1.ax1x.com/2018/01/05/pkOdQe.png)
+
+# 方法调用
 > 现在对方法调用进行一个简单的解析，后面再就函数进行具体的解析。
 
-##### html
+### html
 ```html
 <!-- 重置样式表 -->
 <link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
@@ -47,7 +49,7 @@
 <script src="../dist/js/full-screen-slide.js"></script>
 ```
 
-##### js
+### js
 ```js
 // 默认
 $('.slide-box-demo').setSlide()
@@ -68,8 +70,22 @@ pagination 		| boolean 	| （非必填）是否使用分页导航，只有开启
 pagingTrigger	| string 	| （非必填）分页导航指示器的触发事件，默认为click | 'hover'
 slideLiw 		| number 	| （非必填）设定轮播容器宽度，默认单位为px，无需加单位。默认为1200 | 1000
 slideLih 		| number 	| （非必填）设定轮播容器高度，默认单位为px，无需加单位。默认为600 | 500
-fn				| Object	| （非必填） 回调函数，我们可以在当轮播图切换时，拿到当前轮播图的索引值并在该时刻进行回调的操作。与一般函数写法相同，索引值可传可不传。| function(index) {} 或 function() {} 
+fn				| Object	| （非必填） 回调函数，可以在当轮播图切换时，拿到当前轮播图的索引值并在该时刻进行回调的操作。与一般函数写法相同，索引值可传可不传。| function(index) {} 或 function() {} 
 
-### 结语
-> 在前端项目中，我们需要用到轮播图的地方很多，因为每次都是重复性的编写导致个人时间浪费，现阶段我们将其封装为一个插件，只要按照一定规则便可快速开发该模块。本人才疏学浅，简单对日常使用的幻灯片操作进行了一个封装，如若有好的想法欢迎提出来，共勉。 -- 钿佳
+# demo演示
+> 对于上面所做的解析，如果还有不明白的话，不用担心，就上面的参数提供了demo进行解析，让你快速开发你想要的轮播图。下面为相关demo的地址：
+
+demo名字 | 链接
+---|---
+默认调用 | [01-default](./demo/01-default.html)
+上下页切换调用 | [02-navigation.html](./demo/02-navigation.html)
+分页调用 | [03-pagination.html](./demo/03-pagination.html)
+自动播放 | [04-autoplay.html](./demo/04-autoplay.html)
+自定义宽高 | [05-widthAndheightSetting.html](./demo/05-widthAndheightSetting.html)
+块状展示 | [06-block-display.html](./demo/06-block-display.html)
+宽高完全全屏 | [07-fullscreen.html](./demo/07-fullscreen.html)
+回调函数 | [08-callback.html](./demo/08-callback.html)
+
+# 结语
+> 在前端项目中，需要用到轮播图的地方很多，因为每次都是重复性的编写导致个人时间浪费，现阶段将其封装为一个插件，只要按照一定规则便可快速开发该模块。本人才疏学浅，简单对日常使用的幻灯片操作进行了一个封装，如若有好的想法欢迎提出来，共勉。 -- 钿佳
 
