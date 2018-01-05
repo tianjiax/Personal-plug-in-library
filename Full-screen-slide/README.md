@@ -46,7 +46,7 @@ $('.slide-box-ex').setSlide({
 	isFull:false,
 	switchingSpeed:400,
 	slideTime: 3000,
-    autoPlay:true,
+	autoPlay:true,
 	prevEl:$('.slide-box-ex').find('.slide-button-prev'),
 	nextEl:$('.slide-box-ex').find('.slide-button-next'),
 	pagination:true,
