@@ -5,6 +5,15 @@
 
 ### [jquery封装插件的方法](http://blog.csdn.net/osdfhv/article/details/53185914)
 
+# 代码版本
+
+名称   | 版本  | 说明 | 相关链接
+---|---|---|---
+jquery.js | 1.12.4 | 该插件基于jquery开发。1.x：兼容ie678，使用最为广泛的，官方只做BUG维护，功能不再新增。因此一般项目来说，使用1.x版本就可以了，最终版本：1.12.4 | https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
+full-screen-slide.min.js | 1.0.0 | 轮播图插件压缩版本，未做版本记录，该为默认版本。 | dist文件夹中自己获取
+normalize.css | 4.1.1 | 重置css样式 | https://necolas.github.io/normalize.css/4.1.1/normalize.css
+full-screen-slide.min.css | 1.0.0 | 轮播图插件压缩版本，未做版本记录，该为默认版本。 | dist文件夹中自己获取
+
 # demo简单预览
 ![image](https://s1.ax1x.com/2018/01/05/pkOdQe.png)
 
@@ -13,10 +22,10 @@
 
 ### html
 ```html
-<!-- 重置样式表 -->
+<!-- 重置样式表，按自己需要重置，并非一定用这个。 -->
 <link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
 <!-- 引入slide插件样式表 -->
-<link rel="stylesheet" href="../dist/css/full-screen-slide.css">
+<link rel="stylesheet" href="../dist/css/full-screen-slide.min.css">
 <!-- 调用demo -->
 <div class="slide-box-demo">
 	<div class="slide-box">
@@ -44,9 +53,9 @@
 	</div>	
 </div>
 <!-- 引入jquery -->
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- 引入slide插件js文件 -->
-<script src="../dist/js/full-screen-slide.js"></script>
+<script src="../dist/js/full-screen-slide.min.js"></script>
 ```
 
 ### js

@@ -1,3 +1,4 @@
+/*! full-screen-slide.js v1.0.0 | tianjia | https://github.com/tianjiax/Personal-plug-in-library/tree/master/Full-screen-slide */
 (function ($) { 
     $.fn.setSlide = function(option){ 
         var set = $.extend({ 
