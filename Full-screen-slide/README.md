@@ -57,7 +57,7 @@ $('.slide-box-demo').setSlide()
 # 参数解析
 参数 | 类型 |说明 | 示例值
 ---|---|---|---
-$(this)			| DOM 		|  当前轮播图（$('.slide-box')）外层的包裹的DOM节点，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作。详见demo | ==$("#demo")==.setSlide() 
+$(this)			| DOM 		|  当前轮播图（$('.slide-box')）外层的包裹的DOM节点，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作。详见demo | <span style="color: red">$("#demo")</span>.setSlide() 
 isBlock 		| boolean 	| （非必填）定义幻灯片是否为块状展示该幻灯片。默认为false | true
 fullScreenw 	| boolean 	| （非必填）宽度完全全屏，轮播图宽度为整个屏幕宽度。注意：当设置该参数为true时，slideLiw参数无效。默认为false | true
 fullScreenh 	| boolean 	| （非必填）高度完全全屏，轮播图高度为整个屏幕高度。注意：当设置该参数为true时，slideLih参数无效。默认为false | true
