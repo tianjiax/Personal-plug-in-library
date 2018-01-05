@@ -54,7 +54,7 @@
 // 默认
 $('.slide-box-demo').setSlide()
 ```
-### 参数解析
+# 参数解析
 参数 | 类型 |说明 | 示例值
 ---|---|---|---
 $(this)			| DOM 		|  当前轮播图（$('.slide-box')）外层的包裹的DOM节点，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作。详见demo | ==$("#demo")==.setSlide() 
