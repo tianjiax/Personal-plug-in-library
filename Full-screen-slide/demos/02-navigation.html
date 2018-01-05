@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Full-screen-slide</title>
+	<!-- 重置样式表 -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+	<!-- 引入slide插件样式表 -->
+	<link rel="stylesheet" href="../dist/css/full-screen-slide.css">
+</head>
+<body>
+	<!-- 默认分页调用 -->
+	<h1 style="text-align: center;color:#333">默认分页调用</h1>
+	<div class="slide-box-demo1">
+		<div class="slide-box">
+			<!-- 轮播图主体模块 -->
+			<div class="slide-con">
+				<div class="slide-out">
+					<div class="slide-li">
+						<div class="slide-li-content">
+							<div class="box" style="background: #ddd;color: #333;height: 600px">这里是文本存放位置</div>
+						</div>
+					</div>
+					<div class="slide-li"><img src="../dist/images/slide/1.png" style="width: 100%" alt=""></div>
+					<div class="slide-li">
+						<div class="slide-li-content">
+							<div class="box" style="background: #ccc;color: #333;height: 600px">这里是文本存放位置</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 默认上一页下一页 -->
+			<div class="slide-page">
+				<div class="slide-button-prev" id="slide-button-prev"><i></i></div>
+				<div class="slide-button-next" id="slide-button-next"><i></i></div>
+			</div>
+		</div>	
+	</div>	
+	<br><br>
+	<!-- 自定义分页调用 -->
+	<h1 style="text-align: center;color:#333">自定义分页调用</h1>
+	<div class="slide-box-demo2">
+		<div class="slide-box ">
+			<!-- 轮播图主体模块 -->
+			<div class="slide-con">
+				<div class="slide-out">
+					<div class="slide-li">
+						<div class="slide-li-content">
+							<div class="box" style="background: #ddd;color: #333;height: 600px">这里是文本存放位置</div>
+						</div>
+					</div>
+					<div class="slide-li"><img src="../dist/images/slide/1.png" style="width: 100%" alt=""></div>
+					<div class="slide-li"><img src="../dist/images/slide/3.png" style="width: 100%" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<!-- 自定义上一页下一页 -->
+		<div style="text-align: center">
+			<button class="prev">上一页</button>
+			<button class="next">下一页</button>
+		</div>	
+	</div>
+</body>
+</html>
+<!-- 引入jquery -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<!-- 引入slide插件js文件 -->
+<script src="../dist/js/full-screen-slide.js"></script>
+<script>
+// 默认分页调用
+$('.slide-box-demo1').setSlide()
+
+// 自定义分页调用
+$('.slide-box-demo2').setSlide({
+	prevEl:$('.prev'),
+	nextEl:$('.next'),
+})
+</script>

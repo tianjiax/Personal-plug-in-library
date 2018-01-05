@@ -3,7 +3,7 @@
 
 ##### [jquery封装插件的方法](http://blog.csdn.net/osdfhv/article/details/53185914)
 
-### demo预览
+### demo简单预览
 ![image](http://ww1.sinaimg.cn/large/0060lm7Tly1fn4lgv6n98j31gu0fc4k8.jpg)
 
 ### 方法调用
@@ -14,56 +14,53 @@
 <!-- 重置样式表 -->
 <link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
 <!-- 引入slide插件样式表 -->
-<link rel="stylesheet" href="css/full-screen-slide.min.css">
-<!-- html模块 -->
-<div class="slide-box slide-box-ex">
-	<!-- 轮播图主体模块 -->
-	<div class="slide-con">
-		<div class="slide-out">
-			<div class="slide-li"><img src="images/slide/1.png" style="width: 100%" alt=""></div>
-			<div class="slide-li"><img src="images/slide/2.png" style="width: 100%" alt=""></div>
-			<div class="slide-li">
-				<div class="slide-li-content">
-					<div class="box" style="background: #ddd;color: #333;height: 600px">这里是文本存放位置</div>
+<link rel="stylesheet" href="../dist/css/full-screen-slide.css">
+<!-- 调用demo -->
+<div class="slide-box-demo">
+	<div class="slide-box">
+		<!-- 轮播图主体模块 -->
+		<div class="slide-con">
+			<div class="slide-out">
+				<div class="slide-li">
+					<div class="slide-li-content">
+						<div class="box" style="background: #ddd;color: #333;height: 600px">这里是文本存放位置</div>
+					</div>
+				</div>
+				<div class="slide-li"><img src="../dist/images/slide/1.png" style="width: 100%" alt=""></div>
+				<div class="slide-li">
+					<div class="slide-li-content">
+						<div class="box" style="background: #ccc;color: #333;height: 600px">这里是文本存放位置</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- 自定义上一页下一页 -->
-	<div class="slide-page">
-		<div class="slide-button-prev"><i></i></div>
-		<div class="slide-button-next"><i></i></div>
-	</div>
+		<!-- 默认上一页下一页 -->
+		<div class="slide-page">
+			<div class="slide-button-prev" id="slide-button-prev"><i></i></div>
+			<div class="slide-button-next" id="slide-button-next"><i></i></div>
+		</div>
+	</div>	
 </div>
+<!-- 引入jquery -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <!-- 引入slide插件js文件 -->
-<script src="js/full-screen-slide.min.js"></script>
+<script src="../dist/js/full-screen-slide.js"></script>
 ```
 
 ##### js
 ```js
-// 参数调用
-$('.slide-box-ex').setSlide({
-	isBlock:false,
-	switchingSpeed:400,
-	slideTime: 3000,
-	autoPlay:true,
-	prevEl:$('.slide-box-ex').find('.slide-button-prev'),
-	nextEl:$('.slide-box-ex').find('.slide-button-next'),
-	pagination:true,
-	pagingTrigger:'hover',
-	slideLiw:1100,
-	slideLih:540,
-	fn:function(index) {
-		console.log(index)
-	}
-});
+// 默认
+$('.slide-box-demo').setSlide()
 ```
 ### 参数解析
 参数 | 类型 |说明 | 示例值
 ---|---|---|---
+$(this)			| DOM 		|  当前轮播图（$('.slide-box')）外层的包裹的DOM节点，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作。详见demo | ==$("#demo")==.setSlide() 
 isBlock 		| boolean 	| （非必填）定义幻灯片是否为块状展示该幻灯片。默认为false | true
-switchingSpeed 	| number 	| （非必填）定义轮播图切换速度的毫秒数。如若为空，默认自动播放时间为800毫秒	| 600
-slideTime 		| number 	| （非必填）定义轮播图自动播放的毫秒数，只有开启autoPlay属性时有效。如若为空，默认自动播放时间为3000毫秒 | 3000
+fullScreenw 	| boolean 	| （非必填）宽度完全全屏，轮播图宽度为整个屏幕宽度。注意：当设置该参数为true时，slideLiw参数无效。默认为false | true
+fullScreenh 	| boolean 	| （非必填）高度完全全屏，轮播图高度为整个屏幕高度。注意：当设置该参数为true时，slideLih参数无效。默认为false | true
+switchingSpeed 	| number 	| （非必填）定义轮播图切换速度的毫秒数。如若为空，默认自动播放时间为600毫秒	| 800
+slideTime 		| number 	| （非必填）定义轮播图自动播放的毫秒数，只有开启autoPlay属性时有效。如若为空，默认自动播放时间为3000毫秒 | 2000
 autoPlay 		| boolean 	| （非必填）是否自动切换，默认为false | true
 prevEl 			| DOM 		| （非必填）点击轮播图切换到上一张，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作，默认为$('#slide-button-prev')。注意：如若使用默认标签，id只能单次调用。如果第一张操作时候便跳到最后一张。默认上一页样式：<div class=\"slide-page\"><div class=\"slide-button-prev\">\<i>\</i><\/div><\/div> | $('.slide-button-prev')
 nextEl 			| DOM 		| （非必填）点击轮播图切换到下一张，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作，默认为$('#slide-button-next')。注意：如若使用默认标签，id只能单次调用。如果最后一张操作时候便跳到第一张。默认下一页样式：<div class=\"slide-page\"><div class=\"slide-button-next\">\<i>\</i><\/div><\/div> | $('.slide-button-prev')
