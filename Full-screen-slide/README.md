@@ -43,7 +43,7 @@
 ```js
 // 参数调用
 $('.slide-box-ex').setSlide({
-	isFull:false,
+	isBlock:false,
 	switchingSpeed:400,
 	slideTime: 3000,
 	autoPlay:true,
@@ -61,12 +61,12 @@ $('.slide-box-ex').setSlide({
 ### 参数解析
 参数 | 类型 |说明 | 示例值
 ---|---|---|---
-isFull 			| boolean 	| （非必填）定义幻灯片是否为全屏展示该幻灯片。默认为true | false
-switchingSpeed 	| number 	| （非必填）定义轮播图切换速度的毫秒数。如若为空，默认自动播放时间为500毫秒	| 600
-slideTime 		| number 	| （非必填）定义轮播图自动播放的毫秒数，只有开启autoPlay属性时有效。如若为空，默认自动播放时间为2000毫秒 | 3000
+isBlock 		| boolean 	| （非必填）定义幻灯片是否为块状展示该幻灯片。默认为false | true
+switchingSpeed 	| number 	| （非必填）定义轮播图切换速度的毫秒数。如若为空，默认自动播放时间为800毫秒	| 600
+slideTime 		| number 	| （非必填）定义轮播图自动播放的毫秒数，只有开启autoPlay属性时有效。如若为空，默认自动播放时间为3000毫秒 | 3000
 autoPlay 		| boolean 	| （非必填）是否自动切换，默认为false | true
-prevEl 			| DOM 		| （非必填）点击轮播图切换到上一张，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作，默认为$('#slide-button-prev')。如果第一张操作时候便跳到最后一张。 | $('.slide-button-prev')
-nextEl 			| DOM 		| （非必填）点击轮播图切换到下一张，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作，默认为$('#slide-button-next')。如果最后一张操作时候便跳到第一张。 | $('.slide-button-prev')
+prevEl 			| DOM 		| （非必填）点击轮播图切换到上一张，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作，默认为$('#slide-button-prev')。注意：如若使用默认标签，id只能单次调用。如果第一张操作时候便跳到最后一张。默认上一页样式：<div class=\"slide-page\"><div class=\"slide-button-prev\">\<i>\</i><\/div><\/div> | $('.slide-button-prev')
+nextEl 			| DOM 		| （非必填）点击轮播图切换到下一张，可自定义标签，Dom节点操作沿袭jquery的Dom节点操作，默认为$('#slide-button-next')。注意：如若使用默认标签，id只能单次调用。如果最后一张操作时候便跳到第一张。默认下一页样式：<div class=\"slide-page\"><div class=\"slide-button-next\">\<i>\</i><\/div><\/div> | $('.slide-button-prev')
 pagination 		| boolean 	| （非必填）是否使用分页导航，只有开启autoPlay属性时有效。默认为false | true
 pagingTrigger	| string 	| （非必填）分页导航指示器的触发事件，默认为click | 'hover'
 slideLiw 		| number 	| （非必填）设定轮播容器宽度，默认单位为px，无需加单位。默认为1200 | 1000
