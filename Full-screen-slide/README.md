@@ -77,14 +77,14 @@ fn				| Object	| （非必填） 回调函数，可以在当轮播图切换时�
 
 demo名字 | 链接
 ---|---
-默认调用 | [01-default](./demo/01-default.html)
-上下页切换调用 | [02-navigation.html](./demo/02-navigation.html)
-分页调用 | [03-pagination.html](./demo/03-pagination.html)
-自动播放 | [04-autoplay.html](./demo/04-autoplay.html)
-自定义宽高 | [05-widthAndheightSetting.html](./demo/05-widthAndheightSetting.html)
-块状展示 | [06-block-display.html](./demo/06-block-display.html)
-宽高完全全屏 | [07-fullscreen.html](./demo/07-fullscreen.html)
-回调函数 | [08-callback.html](./demo/08-callback.html)
+默认调用 | [01-default](./demos/01-default.html)
+上下页切换调用 | [02-navigation.html](./demos/02-navigation.html)
+分页调用 | [03-pagination.html](./demos/03-pagination.html)
+自动播放 | [04-autoplay.html](./demos/04-autoplay.html)
+自定义宽高 | [05-widthAndheightSetting.html](./demos/05-widthAndheightSetting.html)
+块状展示 | [06-block-display.html](./demos/06-block-display.html)
+宽高完全全屏 | [07-fullscreen.html](./demos/07-fullscreen.html)
+回调函数 | [08-callback.html](./demos/08-callback.html)
 
 # 结语
 > 在前端项目中，需要用到轮播图的地方很多，因为每次都是重复性的编写导致个人时间浪费，现阶段将其封装为一个插件，只要按照一定规则便可快速开发该模块。本人才疏学浅，简单对日常使用的幻灯片操作进行了一个封装，如若有好的想法欢迎提出来，共勉。 -- 钿佳
