@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Count-down</title>
+</head>
+<body>
+	<!-- demo1 -->
+	<button class="form-btn" style='font-size:20px'>立即领取</button>
+	<!-- demo2 -->
+	<button class="form-btn2" style='font-size:24px'>立即领取</button>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/count-down.js"></script>
+<script>
+// 时间为20秒，单位为 秒 时
+$('.form-btn').countDown({
+	time : 20,
+	unit : '秒'
+})
+
+// 时间为30秒，单位为 空 时
+$('.form-btn2').countDown({
+	time : 30,
+	unit : ''
+})
+</script>
