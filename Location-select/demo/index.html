@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Location-select</title>
+	<style>
+	.tab-ul{
+		position: fixed;
+		right: 20px
+	}
+	.tab-li.active{
+		color: red
+	}
+	</style>
+</head>
+<body>
+<!-- 只是示例，tab模块，可以自己定义 -->
+<div class="tab-ul">
+	<div class="tab-li">1</div>
+	<div class="tab-li">2</div>
+	<div class="tab-li">3</div>
+	<div class="tab-li">4</div>
+</div>
+<!-- 只是示例，内容模块，可以自己定义 -->
+<div class="con-ul">
+	<div class="con-li" style="height:800px;background: #ccc">1</div>
+	<div class="con-li" style="height:800px;background: #ddd">2</div>
+	<div class="con-li" style="height:800px;background: #eee">3</div>
+	<div class="con-li" style="height:800px;background: #e1e1e1">4</div>
+</div>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/location-select.js"></script>	
+<script>
+$('.tab-ul').locSelect({
+	locTab  		: $('.tab-ul .tab-li'),
+	locCon			: $('.con-ul .con-li'),
+	actClassName	: 'active'
+})
+</script>
