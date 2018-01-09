@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>draggable</title>
+	<style>
+	.outer{
+		position: relative;
+		width: 1000px;
+		height: 500px;
+		background: #eee;
+		overflow:hidden 
+	}
+	.drag-box{
+		position: absolute;
+		width:100px;
+		height:100px;
+		background: #01ad59;
+		color:#fff;
+	}
+	</style>
+<link rel="stylesheet" href="css/draggable.js">
+</head>
+<body>
+<div class="outer">
+	<div class="drag-box">
+		文本存放
+	</div>	
+</div>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/draggable.js"></script>	
+<script>
+$('.drag-box').draggable()
+</script>
