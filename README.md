@@ -7,4 +7,4 @@ Personal-plug-in-library
 - [倒计时插件](https://github.com/tianjiax/Personal-plug-in-library/tree/master/Count-down)
 - [定位选中插件](https://github.com/tianjiax/Personal-plug-in-library/tree/master/Location-select)
 - [简单拖拽插件（待完善）](https://github.com/tianjiax/Personal-plug-in-library/tree/master/draggable)
-
+- [分页插件（开发中）](https://github.com/tianjiax/Personal-plug-in-library/tree/master/pagination)
