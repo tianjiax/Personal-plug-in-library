@@ -21,6 +21,10 @@
 <script>
 // 默认调用
 $('#t-page').pagination({
-	count:50
+	count:80,
+	fn:function(curr) {
+		// curr 为当前页码
+		console.log(curr)
+	}
 })
 </script>
