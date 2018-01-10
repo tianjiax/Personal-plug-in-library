@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pagination</title>
+	<!-- 重置样式表 -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+	<!-- pagination.css样式表 -->
+	<link rel="stylesheet" href="css/pagination.css">
+</head>
+<body>
+	<div id="t-page">
+		
+	</div>
+</body>
+</html>
+<!-- 引入jquery -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- 引入t-pagination插件js文件 -->
+<script src="js/pagination.js"></script>
+<script>
+// 默认调用
+$('#t-page').pagination({
+	count:50
+})
+</script>

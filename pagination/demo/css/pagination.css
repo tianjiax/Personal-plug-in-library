@@ -1,0 +1,17 @@
+.ui-page-pre,
+.ui-page-next,
+.ui-page-number{
+	padding: 3px 5px;
+	border:1px solid #67baff;
+	margin: 0 5px;
+	color: #67baff;
+	font-size: 16px;
+	text-decoration:none;
+}
+.ui-page-pre:hover,
+.ui-page-next:hover,
+.ui-page-number:hover,
+.ui-page-number.ui-page-act{
+	background: #67baff;
+	color: #fff
+}
