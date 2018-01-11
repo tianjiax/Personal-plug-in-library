@@ -25,14 +25,14 @@
 					fn				= set.fn;
 
 				// 通过set计算参数	
-				var paginalNumber	= count/limit,
+				var paginalNumber	= Math.ceil(count/limit),
 					index			= 0;
 
 				// 插入上下页
 				paginationBox.append("<a href='javascript:;' class='ui-page-pre'>" + prev + "</a><span class='ui-page-box'></span><a href='javascript:;' class='ui-page-next'>" + next +  "</a>");
 
 				// 插入页码
-				for (var i = 0; i < groups; i++) {
+				for (var i = 0; i < paginalNumber; i++) {
 					paginationBox.find('.ui-page-box').append('<a href="javascript:;" class="ui-page-number" data-number=' + (i+1) + '>' + (i+1) + '</a>')
 				};
 
@@ -69,12 +69,17 @@
 					}
 				)
 
+				// 输出页码样式
+				function pageNumbercss(index){
+				  	paginationBox.find('.ui-page-box').html('');
+				  	
+				}
 
 				// 执行函数
 				function pageFn(index){
 
 					paginationBox.find('.ui-page-number').eq(index).addClass('ui-page-act').siblings().removeClass('ui-page-act');
-
+					
 					curr = index +1;
 
 					fn && fn(curr);

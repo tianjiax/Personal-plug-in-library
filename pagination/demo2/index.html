@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pagination</title>
+	<!-- 重置样式表 -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+</head>
+<body>
+	<div class="commonPage">
+		
+	</div>
+</body>
+</html>
+<!-- 引入jquery -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- 引入插件js文件 -->
+<script src="js/page.js"></script>
+<script>
+// commonPage 是页面中的一个元素，用来承载分页部分
+$(".commonPage").createPage({
+   pageCount: 10,  //总页数，除非是你自己写在这里的数字，否则建议使用Number把它转换成数字
+   current: 1,  // 当前页码
+   backFn: function(p){
+       //回掉函数，p为点击的页码数 比如点击2则p为2
+    	console.log(p);
+    	
+   }
+});
+
+</script>
