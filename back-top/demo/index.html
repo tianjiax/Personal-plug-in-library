@@ -3,54 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Time-reciprocal</title>
+	<style>
+	.back-top{
+		position: fixed;
+		right: 0;
+		bottom: 4%;
+		width: 100px;
+		height: 100px;
+		background: #000;
+	}
+	</style>
 </head>
 <body>
-<!-- 开始时间为空时 -->
-<div class="reciprocal">
-	<span class="t_day"></span>
-	<b>天</b>
-	<span class="t_hour"></span>
-	<b>时</b>
-	<span class="t_minute"></span>
-	<b>分</b>
-	<span class="t_second"></span>
-	<b>秒</b>
-</div>
-
-<!-- 开始时间非空时 -->
-<div class="reciprocal2">
-	<span class="t_day2"></span>
-	<b>D</b>
-	<span class="t_hour2"></span>
-	<b>H</b>
-	<span class="t_minute2"></span>
-	<b>M</b>
-	<span class="t_second2"></span>
-	<b>S</b>
-</div>
-
+	<div class="box" style="height: 10000px"></div>
+	<div class="back-top"></div>
 </body>
 </html>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/time-reciprocal.js"></script>	
+<script src="js/back-top.js"></script>	
 <script>
-// 开始时间为空时
-$('.reciprocal').timeRec({
-	startTime	: "",
-	endTime  	: "2018/10/30 00:00:00",
-	dayAttr  	: $('.t_day'),
-	hourAttr  	: $('.t_hour'),
-	minuteAttr  : $('.t_minute'),
-	secondAttr  : $('.t_second')
-})
-
-// 开始时间非空时
-$('.reciprocal2').timeRec({
-	startTime	: "2018/1/10 3:11:22",
-	endTime  	: "2018/1/30 00:00:00",
-	dayAttr  	: $('.t_day2'),
-	hourAttr  	: $('.t_hour2'),
-	minuteAttr  : $('.t_minute2'),
-	secondAttr  : $('.t_second2')
-})
+$('.back-top').backTop({time:500})
 </script>
